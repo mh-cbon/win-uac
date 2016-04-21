@@ -4,16 +4,17 @@ Should Enable / Disable UAC on windows.
 
 If you are windows admin guru, feel free to comment.
 
-# install
+# Install
 
 ```sh
 npm i @mh-cbon/win-uac --save
 ```
 
-# usage
+# Usage
 
 ```js
 var uac = require('@mh-cbon/win-uac');
+
 uac.enable(function (err) {
   err && console.error('Not it did not work')
 })
@@ -38,6 +39,16 @@ uac.modify(uac.settings.DISABLED, function (err) {
 
 You still need to run this module with an already elevated command line.
 See [this](https://github.com/mh-cbon/aghfabsowecwn)
+
+# Notes²
+
+You still need to reboot windows to make changes effective.
+
+# Tests
+
+Tests are not implemented as I was not able to find a relatively simple way to test those behavior changes.
+
+It was manually tested.. 
 
 # Read more
 - http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/
