@@ -1,0 +1,31 @@
+{
+  "name": "@mh-cbon/win-uac",
+  "version": "1.0.0",
+  "description": "Should Enable / Disable UAC on windows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "npm version patch -m \"patch %s\"",
+    "minor": "npm version minor -m \"minor %s\"",
+    "major": "npm version major -m \"major %s\"",
+    "preversion": "echo \"npm test: not defined\"",
+    "version": "echo \"npm run build: not defined\"",
+    "postversion": "git push && git push --tags && npm run public",
+    "public": "npm publish --access=public"
+  },
+  "keywords": [
+    "windows",
+    "uac",
+    "disable",
+    "enable"
+  ],
+  "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.2",
+    "winreg": "^1.2.0"
+  },
+  "devDependencies": {
+    "should": "^8.3.1"
+  }
+}
