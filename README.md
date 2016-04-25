@@ -4,40 +4,65 @@ Should Enable / Disable UAC on windows.
 
 If you are windows admin guru, feel free to comment.
 
-# Install
+# Api
+
+## Install
 
 ```sh
 npm i @mh-cbon/win-uac --save
 ```
 
-# Usage
+## Usage
 
 ```js
 var uac = require('@mh-cbon/win-uac');
 
 uac.enable(function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
 uac.disable(function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
 uac.modify(uac.settings.ALWAYS_NOTIFY, function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
 uac.modify(uac.settings.ALWAYS_NOTIFY_WITH_BG, function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
 uac.modify(uac.settings.ALWAYS_NOTIFY_WITHOUT_BG, function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
 uac.modify(uac.settings.DISABLED, function (err) {
-  err && console.error('Not it did not work')
+  err && console.error('Nop it did not work')
 })
+```
+
+# Binary
+
+## Install
+
+```sh
+npm i @mh-cbon/win-uac -g
+```
+
+## Usage
+
+```sh
+$ uac             # defaults to disable
+$ uac disable     # disable uac
+$ uac enable      # enable uac
+$ uac with-bg     # enable uac with background support
+$ uac without-bg  # enable uac without background support
+Changes applied, please reboot.
+$ uac wtf
+The changes were not applied properly.
+Incorrect argv argument
+Use one of enable, disable, with-bg, without-bg
 ```
 
 # Notes
 
-You still need to run this module with an already elevated command line.
+You still need to run this module within an elevated command line.
 See [this](https://github.com/mh-cbon/aghfabsowecwn)
 
 # Notes²
@@ -48,7 +73,7 @@ You still need to reboot windows to make changes effective.
 
 Tests are not implemented as I was not able to find a relatively simple way to test those behavior changes.
 
-It was manually tested.. 
+It was manually tested..
 
 # Read more
 - http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/

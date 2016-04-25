@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Should Enable / Disable UAC on windows",
   "main": "index.js",
+  "bin": {
+    "uac": "./bin.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch": "npm version patch -m \"patch %s\"",
