@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Win-uac by mh-cbon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Win-uac</h1>
+      <h2 class="project-tagline">Enable / Disable UAC on windows</h2>
+      <a href="https://github.com/mh-cbon/win-uac" class="btn">View on GitHub</a>
+      <a href="https://github.com/mh-cbon/win-uac/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mh-cbon/win-uac/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="win-uac" class="anchor" href="#win-uac" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>win-uac</h1>
+
+<p>Should Enable / Disable UAC on windows.</p>
+
+<p>If you are windows admin guru, feel free to comment.</p>
+
+<h1>
+<a id="api" class="anchor" href="#api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Api</h1>
+
+<h2>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-source-shell"><pre>npm i @mh-cbon/win-uac --save</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> uac <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>@mh-cbon/win-uac<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">uac</span>.<span class="pl-en">enable</span>(<span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})
+<span class="pl-smi">uac</span>.<span class="pl-en">disable</span>(<span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})
+
+<span class="pl-smi">uac</span>.<span class="pl-en">modify</span>(<span class="pl-smi">uac</span>.<span class="pl-smi">settings</span>.<span class="pl-c1">ALWAYS_NOTIFY</span>, <span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})
+<span class="pl-smi">uac</span>.<span class="pl-en">modify</span>(<span class="pl-smi">uac</span>.<span class="pl-smi">settings</span>.<span class="pl-c1">ALWAYS_NOTIFY_WITH_BG</span>, <span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})
+<span class="pl-smi">uac</span>.<span class="pl-en">modify</span>(<span class="pl-smi">uac</span>.<span class="pl-smi">settings</span>.<span class="pl-c1">ALWAYS_NOTIFY_WITHOUT_BG</span>, <span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})
+<span class="pl-smi">uac</span>.<span class="pl-en">modify</span>(<span class="pl-smi">uac</span>.<span class="pl-smi">settings</span>.<span class="pl-c1">DISABLED</span>, <span class="pl-k">function</span> (<span class="pl-smi">err</span>) {
+  err <span class="pl-k">&amp;&amp;</span> <span class="pl-en">console</span>.<span class="pl-c1">error</span>(<span class="pl-s"><span class="pl-pds">'</span>Nop it did not work<span class="pl-pds">'</span></span>)
+})</pre></div>
+
+<h1>
+<a id="binary" class="anchor" href="#binary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Binary</h1>
+
+<h2>
+<a id="install-1" class="anchor" href="#install-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h2>
+
+<div class="highlight highlight-source-shell"><pre>npm i @mh-cbon/win-uac -g</pre></div>
+
+<h2>
+<a id="usage-1" class="anchor" href="#usage-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-source-shell"><pre>$ uac             <span class="pl-c"># defaults to disable</span>
+$ uac disable     <span class="pl-c"># disable uac</span>
+$ uac <span class="pl-c1">enable</span>      <span class="pl-c"># enable uac</span>
+$ uac with-bg     <span class="pl-c"># enable uac with background support</span>
+$ uac without-bg  <span class="pl-c"># enable uac without background support</span>
+Changes applied, please reboot.
+
+$ uac wtf
+The changes were not applied properly.
+Incorrect argv argument
+Use one of <span class="pl-c1">enable</span>, disable, with-bg, without-bg
+</pre></div>
+
+<h1>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h1>
+
+<p>You still need to run this module within an elevated command line.
+See <a href="https://github.com/mh-cbon/aghfabsowecwn">this</a></p>
+
+<h1>
+<a id="notes-1" class="anchor" href="#notes-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes²</h1>
+
+<p>You still need to reboot windows to make changes effective.</p>
+
+<h1>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tests</h1>
+
+<p>Tests are not implemented as I was not able to find a relatively simple way to test those behavior changes.</p>
+
+<p>It was manually tested..</p>
+
+<h1>
+<a id="read-more" class="anchor" href="#read-more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Read more</h1>
+
+<ul>
+<li><a href="http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/">http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/</a></li>
+<li><a href="http://www.ghacks.net/2013/06/20/how-to-configure-windows-uac-prompt-behavior-for-admins-and-users/">http://www.ghacks.net/2013/06/20/how-to-configure-windows-uac-prompt-behavior-for-admins-and-users/</a></li>
+<li>
+<a href="https://technet.microsoft.com/en-us/library/dd835564%28v=ws.10%29.aspx">https://technet.microsoft.com/en-us/library/dd835564%28v=ws.10%29.aspx</a> (see Registry key settings)</li>
+<li><a href="http://blog.pythonaro.com/2013/05/fully-disable-user-access-control-uac.html">http://blog.pythonaro.com/2013/05/fully-disable-user-access-control-uac.html</a></li>
+<li><a href="https://github.com/zleight1/DisableUAC/blob/master/DisableUAC/Library.cs">https://github.com/zleight1/DisableUAC/blob/master/DisableUAC/Library.cs</a></li>
+<li><a href="http://stackoverflow.com/questions/682182/disabling-uac-programmatically">http://stackoverflow.com/questions/682182/disabling-uac-programmatically</a></li>
+<li><a href="http://www.tipandtrick.net/ways-to-disable-or-turn-off-user-account-access-control-uac-in-windows-vista/">http://www.tipandtrick.net/ways-to-disable-or-turn-off-user-account-access-control-uac-in-windows-vista/</a></li>
+<li><a href="http://www.howtogeek.com/howto/windows-vista/enable-or-disable-uac-from-the-windows-vista-command-line/">http://www.howtogeek.com/howto/windows-vista/enable-or-disable-uac-from-the-windows-vista-command-line/</a></li>
+<li><a href="http://blogs.msmvps.com/bradley/2008/02/08/keep-your-bikini-on/">http://blogs.msmvps.com/bradley/2008/02/08/keep-your-bikini-on/</a></li>
+<li><a href="https://technet.microsoft.com/en-us/library/ff715520.aspx">https://technet.microsoft.com/en-us/library/ff715520.aspx</a></li>
+<li><a href="http://bettereducation.com.au/forum/it.aspx?g=posts&amp;t=2481">http://bettereducation.com.au/forum/it.aspx?g=posts&amp;t=2481</a></li>
+<li><a href="http://www.tipandtrick.net/ways-to-disable-or-turn-off-user-account-access-control-uac-in-windows-vista/">http://www.tipandtrick.net/ways-to-disable-or-turn-off-user-account-access-control-uac-in-windows-vista/</a></li>
+<li><a href="http://winaero.com/blog/registry-tweak-to-disable-action-center-notifications-in-windows-7/">http://winaero.com/blog/registry-tweak-to-disable-action-center-notifications-in-windows-7/</a></li>
+<li><a href="http://www.eightforums.com/system-security/44425-how-properly-disable-uac-using-registry-win-8-1-a.html">http://www.eightforums.com/system-security/44425-how-properly-disable-uac-using-registry-win-8-1-a.html</a></li>
+<li><a href="http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/">http://winaero.com/blog/how-to-tweak-or-disable-uac-in-windows-8-1/</a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mh-cbon/win-uac">Win-uac</a> is maintained by <a href="https://github.com/mh-cbon">mh-cbon</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
