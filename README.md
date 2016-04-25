@@ -23,6 +23,7 @@ uac.enable(function (err) {
 uac.disable(function (err) {
   err && console.error('Nop it did not work')
 })
+
 uac.modify(uac.settings.ALWAYS_NOTIFY, function (err) {
   err && console.error('Nop it did not work')
 })
@@ -54,10 +55,12 @@ $ uac enable      # enable uac
 $ uac with-bg     # enable uac with background support
 $ uac without-bg  # enable uac without background support
 Changes applied, please reboot.
+
 $ uac wtf
 The changes were not applied properly.
 Incorrect argv argument
 Use one of enable, disable, with-bg, without-bg
+
 ```
 
 # Notes
